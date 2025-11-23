@@ -18,18 +18,28 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
 
-    - name: Add msbuild to PATH on Windows
+    - name: Add cl to PATH on Windows
       if: matrix.os == 'windows-latest'
-      uses: microsoft/setup-msbuild@v2
+      uses: ilammy/msvc-dev-cmd@v1
+
+    - name: prepare for Build on windows (power shell)
+      if: matrix.os == 'windows-latest'
+      run: |
+        echo "buildTarget=build_MSVC" | Out-File -FilePath "$env:GITHUB_ENV" -Append
+
+    - name: prepare for Build on non-windows (bash)
+      if: matrix.os != 'windows-latest'
+      run: |
+        echo "buildTarget=build_${{ matrix.os }}" >> "$GITHUB_ENV"
 
     - name: Build
-      run: make build=build-${{ matrix.os }}
+      run: make build=${{ env.buildTarget }}
 
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
         name: build-${{ matrix.os }}
-        path: build-${{ matrix.os }}
+        path: ${{ env.buildTarget }}
 
   create-release:
     needs: build
@@ -59,14 +69,16 @@ jobs:
         for platform in "${platforms[@]}"; do
           artifact_name="build-${platform}"
           proj_name="wordinter"
-          if [ "$platform" = "windows-latest" ]; then
-              suffix=".exe"
-          else
-              suffix=""
-          fi
           mkdir -p $artifact_name
           gh run download --name "$artifact_name" --dir $artifact_name
-          mv "${artifact_name}/${proj_name}${suffix}" "${proj_name}-${platform}${suffix}"
-          gh release upload ${{ github.ref_name }} "${proj_name}-${platform}${suffix}"
+
+          if [ "$platform" == "windows-latest" ]; then
+            suffix=".exe"
+          else
+            suffix=""
+          fi
+          result_asset_name="${proj_name}-${platform}${suffix}"
+          mv "${artifact_name}/${proj_name}${suffix}" "$result_asset_name"
+          gh release upload "${{ github.ref_name }}" "$result_asset_name"
         done
 
