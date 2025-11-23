@@ -1,4 +1,3 @@
-
 name: C CD
 
 on:
@@ -11,45 +10,63 @@ jobs:
     permissions:
       contents: write
     strategy:
-      fail-fast: false       
+      fail-fast: false
       matrix:
-       os: [ubuntu-latest, windows-lastest, macos-lastest]
+        os: [ubuntu-latest, windows-latest, macos-latest]
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
       uses: actions/checkout@v3
 
     - name: Add msbuild to PATH on Windows
-      if: matrix.os == 'windows-lastest'
+      if: matrix.os == 'windows-latest'
       uses: microsoft/setup-msbuild@v2
 
-    - name: Update build Dir
-      id: buildInfo
-      run: echo adding build dir info
-      env:
-        suffix: ${{ matrix.os == 'windows-lastest' && 'MSVC' || matrix.os }}
-      
     - name: Build
-      run: make build=build_${{ steps.buildInfo.env.suffix }}
-      
+      run: make build=build-${{ matrix.os }}
+
+    - name: Upload build artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: build-${{ matrix.os }}
+        path: build-${{ matrix.os }}
+
+  create-release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
     - name: Create release
       id: create_release
       uses: actions/create-release@v1
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}	
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         tag_name: ${{ github.ref }}
-        release_name: Release ${{ github.ref }}
+        release_name: Release ${{ github.ref_name }}
         draft: false
         prerelease: false
-    - name: Upload release asset
-      uses: actions/upload-release-asset@v1
+
+    - name: Download and upload artifacts
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}	
-        assert_suf: ${{ matrix.os == 'windows-lastest' && '.exe' || '' }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: build_${{ steps.buildInfo.env.suffix }}/wordinter${{ env.assert_suf }}
-        asset_name: wordinter.${{ matrix.os }}${{ env.assert_suf }}
-        asset_content_type: application/octet-stream
+        GH_TOKEN: ${{ github.token }}
+      run: |
+        platforms=(ubuntu-latest windows-latest macos-latest)
+        for platform in "${platforms[@]}"; do
+          artifact_name="build-${platform}"
+          proj_name="wordinter"
+          if [ "$platform" = "windows-latest" ]; then
+              suffix=".exe"
+          else
+              suffix=""
+          fi
+          mkdir -p $artifact_name
+          gh run download --name "$artifact_name" --dir $artifact_name
+          mv "${artifact_name}/${proj_name}${suffix}" "${proj_name}-${platform}${suffix}"
+          gh release upload ${{ github.ref_name }} "${proj_name}-${platform}${suffix}"
+        done
 
