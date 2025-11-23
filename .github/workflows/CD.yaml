@@ -4,6 +4,7 @@ name: C CD
 on:
   push:
     tags: "v*"
+  workflow_dispatch:
 
 jobs:
   build:
