@@ -118,7 +118,7 @@ Include dependency graph for dbop.h:</div>
 <div class="center"><img src="dbop_8h__incl.png" border="0" usemap="#asrc_2dbop_8h" alt=""/></div>
 <map name="asrc_2dbop_8h" id="asrc_2dbop_8h">
 <area shape="rect" title="data base operations" alt="" coords="151,5,233,31"/>
-<area shape="rect" href="types_8h.html" title="types for storing data" alt="" coords="36,153,98,178"/>
+<area shape="rect" href="types_8h.html" title="types for storing data /*doctest:" alt="" coords="36,153,98,178"/>
 <area shape="poly" title=" " alt="" coords="151,23,116,27,78,37,42,54,13,80,8,95,13,111,24,127,39,141,35,145,20,130,8,113,3,95,8,78,39,49,76,32,115,22,151,17"/>
 <area shape="rect" href="strimpl_8h.html" title="string implementation" alt="" coords="129,226,199,252"/>
 <area shape="poly" title=" " alt="" coords="192,32,184,79,169,211,164,210,179,79,187,31"/>
@@ -183,8 +183,46 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>data base operations </p>
-<p>some functions to operate <a class="el" href="structInterpreter.html">Interpreter</a> </p>
-</div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<p>some functions to operate <a class="el" href="structInterpreter.html">Interpreter</a></p>
+<p>/*doctest: </p><div class="fragment"><div class="line">  RecSeq seq;</div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a9806af1e1680fc42a9611505261a34c8">initSeq</a>(<a class="code hl_struct" href="structRec.html">Rec</a>, seq);</div>
+<div class="line"> </div>
+<div class="line">  CharSeq str1 = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;here is str1\nnewline\n\nA new para is here&quot;</span>);</div>
+<div class="line">  <a class="code hl_struct" href="structRec.html">Rec</a> r1 = {<span class="stringliteral">&quot;f1&quot;</span>, str1};</div>
+<div class="line"> </div>
+<div class="line">  CharSeq str2 = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;Oh, here is str2&quot;</span>);</div>
+<div class="line">  <a class="code hl_struct" href="structRec.html">Rec</a> r2 = {<span class="stringliteral">&quot;f2&quot;</span>, str2};</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#aa9ece2e730692bbdeddf2f1585ea2d6f">addItem</a>(seq, r1);</div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#aa9ece2e730692bbdeddf2f1585ea2d6f">addItem</a>(seq, r2);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_struct" href="structInterpreter.html">Interpreter</a> interp = <a class="code hl_define" href="interptype_8h.html#a3b68ed98f7a25e64f4a24e3de593aa9f">initInterpreter</a>(seq, <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">bool</span> ignoreCase = <span class="keyword">false</span>;</div>
+<div class="line">  <span class="keywordtype">char</span>* word = <span class="stringliteral">&quot;is&quot;</span>;</div>
+<div class="line">  <a class="code hl_function" href="#a1665291dd3a2b17c55e5fd319afee27a">queryAll</a>(interp, word, ignoreCase);</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">size_t</span> cnt = <a class="code hl_function" href="#add7ac133840f2227b5e7c08f92cf9dab">countWordOf</a>(interp, 1 <span class="comment">// ord of &quot;f1&quot;</span></div>
+<div class="line">    , 2);</div>
+<div class="line"> </div>
+<div class="line">  printf(<span class="stringliteral">&quot;%zu\n&quot;</span>, cnt);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordtype">size_t</span> fre = <a class="code hl_function" href="#a245e123bf333a89d26bc38915659b0ea">countFrequency</a>(interp, word, ignoreCase);</div>
+<div class="line"> </div>
+<div class="line">  printf(<span class="stringliteral">&quot;%zu\n&quot;</span>, fre);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// </span></div>
+<div class="ttc" id="adbop_8h_html_a1665291dd3a2b17c55e5fd319afee27a"><div class="ttname"><a href="#a1665291dd3a2b17c55e5fd319afee27a">queryAll</a></div><div class="ttdeci">bool queryAll(const Interpreter interp, const char *word, bool ignoreCase)</div></div>
+<div class="ttc" id="adbop_8h_html_a245e123bf333a89d26bc38915659b0ea"><div class="ttname"><a href="#a245e123bf333a89d26bc38915659b0ea">countFrequency</a></div><div class="ttdeci">size_t countFrequency(const Interpreter interp, const char *word, bool ignoreCase)</div><div class="ttdoc">count the frequency of word</div></div>
+<div class="ttc" id="adbop_8h_html_add7ac133840f2227b5e7c08f92cf9dab"><div class="ttname"><a href="#add7ac133840f2227b5e7c08f92cf9dab">countWordOf</a></div><div class="ttdeci">size_t countWordOf(const Interpreter interp, slen_t fileOrd, size_t para)</div></div>
+<div class="ttc" id="ainterptype_8h_html_a3b68ed98f7a25e64f4a24e3de593aa9f"><div class="ttname"><a href="interptype_8h.html#a3b68ed98f7a25e64f4a24e3de593aa9f">initInterpreter</a></div><div class="ttdeci">#define initInterpreter(db, mode)</div><div class="ttdef"><b>Definition</b> interptype.h:17</div></div>
+<div class="ttc" id="aseq_8h_html_a9806af1e1680fc42a9611505261a34c8"><div class="ttname"><a href="seq_8h.html#a9806af1e1680fc42a9611505261a34c8">initSeq</a></div><div class="ttdeci">#define initSeq(T, seq)</div><div class="ttdef"><b>Definition</b> seq.h:29</div></div>
+<div class="ttc" id="aseq_8h_html_aa9ece2e730692bbdeddf2f1585ea2d6f"><div class="ttname"><a href="seq_8h.html#aa9ece2e730692bbdeddf2f1585ea2d6f">addItem</a></div><div class="ttdeci">#define addItem(seq, item)</div><div class="ttdef"><b>Definition</b> seq.h:75</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1b1ddc357c566a272f24dc94cf8a036e"><div class="ttname"><a href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a></div><div class="ttdeci">CharSeq charpToSeq(const char *p)</div></div>
+<div class="ttc" id="astructInterpreter_html"><div class="ttname"><a href="structInterpreter.html">Interpreter</a></div><div class="ttdef"><b>Definition</b> interptype.h:11</div></div>
+<div class="ttc" id="astructRec_html"><div class="ttname"><a href="structRec.html">Rec</a></div><div class="ttdef"><b>Definition</b> types.h:32</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="af433440181aa506cd245f61e6960bc10" name="af433440181aa506cd245f61e6960bc10"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af433440181aa506cd245f61e6960bc10">&#9670;&#160;</a></span>Err</h2>
 

@@ -153,7 +153,61 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>parse utilities </p>
-</div><h2 class="groupheader">Typedef Documentation</h2>
+<p>/*doctest: </p><div class="fragment"><div class="line"><span class="comment">// # for one certain char</span></div>
+<div class="line">  CharSeq s = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;a   String&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  CharSeq ss = <a class="code hl_function" href="#ac190c711bb77f4c329f75b804225e13a">parseUntil</a>(s, <span class="charliteral">&#39; &#39;</span>, 0);</div>
+<div class="line">  <a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(ss); <span class="comment">//-&gt; a</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(ss); <span class="comment">// ss.data destoryed</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_typedef" href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a> n = <a class="code hl_function" href="#ad5adca7deca0c22a02d3e7fc537527fb">skip</a>(s, <span class="charliteral">&#39; &#39;</span>, ss.len);</div>
+<div class="line">  printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot;\n&quot;</span>, n); <span class="comment">//-&gt; 3</span></div>
+<div class="line"> </div>
+<div class="line">  ss = <a class="code hl_function" href="#ac190c711bb77f4c329f75b804225e13a">parseUntil</a>(s, <span class="charliteral">&#39; &#39;</span>, ss.len+n);</div>
+<div class="line">  <a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(ss); <span class="comment">//-&gt; String</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(ss);</div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(s);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// # for punctuations(not &#39;-&#39;) and spaces</span></div>
+<div class="line">  CharSeq s2 = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;a,String&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  CharSeq ss2 = <a class="code hl_function" href="#a72b0bf9930adbbe38b45629b0a9615a8">parseUntilW</a>(s2, 0);</div>
+<div class="line">  <a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(ss2);</div>
+<div class="line">  </div>
+<div class="line">  <a class="code hl_typedef" href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a> n2 = <a class="code hl_function" href="#a2789aaddd98725e6258ea4b8dd1a6ecc">skipW</a>(s2, ss2.len);</div>
+<div class="line">  printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot;\n&quot;</span>, n2);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(ss2);</div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(s2);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// # for 2 cahrs as sep</span></div>
+<div class="line">  CharSeq s3 = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;a String  another&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  CharSeq ss3 = <a class="code hl_function" href="#a13ab6a23acfa4aadd0dc0df86a922731">parseUntil2</a>(s2, <span class="charliteral">&#39; &#39;</span>, 0);</div>
+<div class="line"> </div>
+<div class="line">  printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot;: &quot;</span>, ss3.len);<a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(ss3);</div>
+<div class="line">  </div>
+<div class="line">  <a class="code hl_typedef" href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a> n3 = <a class="code hl_function" href="#ad5adca7deca0c22a02d3e7fc537527fb">skip</a>(s3, <span class="charliteral">&#39; &#39;</span>,ss3.len);</div>
+<div class="line"> </div>
+<div class="line">  printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot;\n&quot;</span>, n3);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(ss3);</div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(s3);</div>
+<div class="line"><span class="comment">// </span></div>
+<div class="ttc" id="aparseutils_8h_html_a13ab6a23acfa4aadd0dc0df86a922731"><div class="ttname"><a href="#a13ab6a23acfa4aadd0dc0df86a922731">parseUntil2</a></div><div class="ttdeci">CharSeq parseUntil2(const CharSeq s, char until, slen_t start)</div><div class="ttdoc">parse until two until characters are met</div></div>
+<div class="ttc" id="aparseutils_8h_html_a2789aaddd98725e6258ea4b8dd1a6ecc"><div class="ttname"><a href="#a2789aaddd98725e6258ea4b8dd1a6ecc">skipW</a></div><div class="ttdeci">slen_t skipW(const CharSeq, slen_t start)</div><div class="ttdoc">skip space and punctuations except '-'</div></div>
+<div class="ttc" id="aparseutils_8h_html_a72b0bf9930adbbe38b45629b0a9615a8"><div class="ttname"><a href="#a72b0bf9930adbbe38b45629b0a9615a8">parseUntilW</a></div><div class="ttdeci">CharSeq parseUntilW(const CharSeq s, slen_t start)</div></div>
+<div class="ttc" id="aparseutils_8h_html_ac190c711bb77f4c329f75b804225e13a"><div class="ttname"><a href="#ac190c711bb77f4c329f75b804225e13a">parseUntil</a></div><div class="ttdeci">CharSeq parseUntil(const CharSeq s, char until, slen_t start)</div></div>
+<div class="ttc" id="aparseutils_8h_html_ad5adca7deca0c22a02d3e7fc537527fb"><div class="ttname"><a href="#ad5adca7deca0c22a02d3e7fc537527fb">skip</a></div><div class="ttdeci">slen_t skip(const CharSeq s, char skipped, slen_t start)</div></div>
+<div class="ttc" id="aseq_8h_html_a65adaf7b102d7d322c24092dc6ea7ab3"><div class="ttname"><a href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a></div><div class="ttdeci">#define PRI_SLEN</div><div class="ttdef"><b>Definition</b> seq.h:16</div></div>
+<div class="ttc" id="aseq_8h_html_a7765a0250c053c80533915a048e26adc"><div class="ttname"><a href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a></div><div class="ttdeci">#define deinitSeq(seq)</div><div class="ttdef"><b>Definition</b> seq.h:46</div></div>
+<div class="ttc" id="aseq_8h_html_a7d6186d77c9b23d75d4f7d87d0546e04"><div class="ttname"><a href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a></div><div class="ttdeci">size_t slen_t</div><div class="ttdef"><b>Definition</b> seq.h:15</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1109821bbfc48e28d2095cc2dab2f8a0"><div class="ttname"><a href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a></div><div class="ttdeci">#define printlnCharSeq(s)</div><div class="ttdef"><b>Definition</b> strimpl.h:41</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1b1ddc357c566a272f24dc94cf8a036e"><div class="ttname"><a href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a></div><div class="ttdeci">CharSeq charpToSeq(const char *p)</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="aa86f608dfa873cbd8f7a3540d8f682fb" name="aa86f608dfa873cbd8f7a3540d8f682fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa86f608dfa873cbd8f7a3540d8f682fb">&#9670;&#160;</a></span>ParseFunc</h2>
 

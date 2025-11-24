@@ -1,6 +1,6 @@
 <map id="src/interptype.h" name="src/interptype.h">
 <area shape="rect" id="Node000001" title="interpreter type" alt="" coords="39,5,148,31"/>
-<area shape="rect" id="Node000002" href="$types_8h.html" title="types for storing data" alt="" coords="63,79,125,105"/>
+<area shape="rect" id="Node000002" href="$types_8h.html" title="types for storing data /*doctest:" alt="" coords="63,79,125,105"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,31,96,63,91,63,91,31"/>
 <area shape="rect" id="Node000003" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="32,226,84,252"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,106,67,212,62,211,88,104"/>

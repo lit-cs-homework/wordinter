@@ -1,6 +1,6 @@
 <map id="src/dbop.h" name="src/dbop.h">
 <area shape="rect" id="Node000001" title="data base operations" alt="" coords="151,5,233,31"/>
-<area shape="rect" id="Node000002" href="$types_8h.html" title="types for storing data" alt="" coords="36,153,98,178"/>
+<area shape="rect" id="Node000002" href="$types_8h.html" title="types for storing data /*doctest:" alt="" coords="36,153,98,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="151,23,116,27,78,37,42,54,13,80,8,95,13,111,24,127,39,141,35,145,20,130,8,113,3,95,8,78,39,49,76,32,115,22,151,17"/>
 <area shape="rect" id="Node000006" href="$strimpl_8h.html" title="string implementation" alt="" coords="129,226,199,252"/>
 <area shape="poly" id="edge19_Node000001_Node000006" title=" " alt="" coords="192,32,184,79,169,211,164,210,179,79,187,31"/>

@@ -227,8 +227,87 @@ Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ascii ahpha parse cmdline argument </p>
 <dl class="section note"><dt>Note</dt><dd>for opt arg, only one char is stored. e.g. -A is a oppsite flag of -a</dd></dl>
-<dl class="section attention"><dt>Attention</dt><dd>latter arg value will overwrite the former value </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<dl class="section attention"><dt>Attention</dt><dd>latter arg value will overwrite the former value</dd></dl>
+<p>/*doctest: </p><div class="fragment"><div class="line"><span class="preprocessor">  #define argc_ 3</span></div>
+<div class="line">  <span class="keywordtype">char</span>* argv_[argc_+1] = {<span class="stringliteral">&quot;./main&quot;</span>, <span class="stringliteral">&quot;-l&quot;</span>, <span class="stringliteral">&quot;-c&quot;</span>,  NULL};</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  <span class="keyword">const</span> <span class="keywordtype">char</span>*usage = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line">    <span class="comment">// XXX: not use argv_</span></div>
+<div class="line">  <a class="code hl_struct" href="structArgParserObj.html">ArgParser</a> parser = <a class="code hl_function" href="#aab934a607d53d81829a0d206023e677e">newArgParser</a>(argc, argv, <span class="stringliteral">&quot;base help...&quot;</span>);</div>
+<div class="line">  </div>
+<div class="line">  <a class="code hl_function" href="#ac13c51c29a0e71393560ab0172250a19">enInfo</a>(parser, (<a class="code hl_struct" href="structProjInfo.html">ProjInfo</a>){.auther=<span class="stringliteral">&quot;lit&quot;</span>,.usages=<a class="code hl_define" href="#a27e7fa06ae35c4dff98f9041f3572581">USAGES</a>(</div>
+<div class="line">     <span class="stringliteral">&quot;[-l|-L] [-c,--code CODE] dir|[-f,--file FILE]...\t run code and exit&quot;</span></div>
+<div class="line">    ,<span class="stringliteral">&quot;[-l|-L] dir|[-f,--file FILE]...\t\t\t enter REPL&quot;</span></div>
+<div class="line">    )</div>
+<div class="line">   }</div>
+<div class="line">  );</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//char k=&#39;m&#39;;</span></div>
+<div class="line">  <span class="keywordtype">char</span> listK=<span class="charliteral">&#39;c&#39;</span>;</div>
+<div class="line">  <span class="keywordtype">char</span> flag=<span class="charliteral">&#39;l&#39;</span>;</div>
+<div class="line">  <span class="keywordtype">char</span> filesK = <span class="charliteral">&#39;f&#39;</span>;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_function" href="#a7996d8773260f7c0906d547e2adbd927">addArgHelp</a>(parser, <span class="stringliteral">&quot;dir&quot;</span>, <span class="stringliteral">&quot;dir to process&quot;</span>);</div>
+<div class="line">  </div>
+<div class="line">  <a class="code hl_function" href="#a9adcfddf48b9fd38cc5ee762f472a280">addListKey</a>(parser, listK, <span class="stringliteral">&quot;CODE&quot;</span>, <span class="stringliteral">&quot;help for c&quot;</span>);</div>
+<div class="line">  <a class="code hl_function" href="#a47bd55d473e46e2d56a6008ffb6bd092">addArgMap</a>(parser, listK, <span class="stringliteral">&quot;--code&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_function" href="#a3be8616bb1051b44029738a52980e3e1">addBoolOpt</a>(parser, flag, <span class="stringliteral">&quot;help for flag&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//addListKey(parser, filesK, &quot;FILE&quot;, &quot;file help&quot;);</span></div>
+<div class="line">  <span class="comment">//addArgMap(parser, filesK, &quot;--file&quot;);</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_struct" href="structParseArgRes.html">ParseArgRes</a> res = <a class="code hl_function" href="#a5950c8c25c7c023846078db2a0989bc7">parseArgs</a>(parser);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// check err first</span></div>
+<div class="line">  <span class="keywordflow">if</span>(res.<a class="code hl_variable" href="structParseArgRes.html#a838a5b5da6ce426d8ff53c3031ebcd0f">err</a>!=NULL){</div>
+<div class="line">    printf(<span class="stringliteral">&quot;err: %s\n&quot;</span>, res.<a class="code hl_variable" href="structParseArgRes.html#a838a5b5da6ce426d8ff53c3031ebcd0f">err</a>);</div>
+<div class="line">    exit(-1);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="keywordflow">else</span> puts(<span class="stringliteral">&quot;no parse error...&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line"> </div>
+<div class="line">  printf(<span class="stringliteral">&quot;if want opt %c: %d\n&quot;</span>, flag, <a class="code hl_define" href="#a64358787fe59ae10092afe199a82f069">wantOpt</a>(res, flag));</div>
+<div class="line"> </div>
+<div class="line">  <span class="comment">//const char* val = getVal(res, k);</span></div>
+<div class="line">  <span class="comment">//printf(&quot;-%c %s\n&quot;, k, val);</span></div>
+<div class="line"> </div>
+<div class="line">  ListArg codes = <a class="code hl_define" href="#a86e32dc413ef64d57e4b9d74c7929314">getListVal</a>(res, listK);</div>
+<div class="line"> </div>
+<div class="line">  puts(<span class="stringliteral">&quot;args of c:&quot;</span>);</div>
+<div class="line">  <span class="comment">//forEach(codes, printlnCharSeq);</span></div>
+<div class="line">  <span class="keywordflow">for</span>(<a class="code hl_typedef" href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a> i=0; i&lt;codes.len; i++) <a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(<a class="code hl_define" href="seq_8h.html#a8a0dbf07605ac055fcdb739cce3740d5">getItem</a>(codes, i));</div>
+<div class="line"> </div>
+<div class="line">  puts(<span class="stringliteral">&quot;the is args:&quot;</span>);</div>
+<div class="line">  <span class="keywordflow">for</span>(<a class="code hl_typedef" href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a> i=0; i&lt;res.<a class="code hl_variable" href="structParseArgRes.html#a139bf6bc6f837b497d0bcc5fa808a029">args</a>.len; i++) <a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(<a class="code hl_define" href="seq_8h.html#a8a0dbf07605ac055fcdb739cce3740d5">getItem</a>(res.<a class="code hl_variable" href="structParseArgRes.html#a139bf6bc6f837b497d0bcc5fa808a029">args</a>, i));</div>
+<div class="line">  </div>
+<div class="line">  <span class="comment">//printAllArgsHelp(parser);</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_function" href="#a18b568dbbe23a4e0a8bfa9f41fc2b5f0">freeParseArgRes</a>(res);</div>
+<div class="line">  <a class="code hl_function" href="#a0c1f627d82f85a36a977149732a20908">freeArgParser</a>(parser);</div>
+<div class="line"><span class="comment">//</span></div>
+<div class="ttc" id="aaparsearg_8h_html_a0c1f627d82f85a36a977149732a20908"><div class="ttname"><a href="#a0c1f627d82f85a36a977149732a20908">freeArgParser</a></div><div class="ttdeci">void freeArgParser(ArgParser parser)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a18b568dbbe23a4e0a8bfa9f41fc2b5f0"><div class="ttname"><a href="#a18b568dbbe23a4e0a8bfa9f41fc2b5f0">freeParseArgRes</a></div><div class="ttdeci">void freeParseArgRes(ParseArgRes res)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a27e7fa06ae35c4dff98f9041f3572581"><div class="ttname"><a href="#a27e7fa06ae35c4dff98f9041f3572581">USAGES</a></div><div class="ttdeci">#define USAGES(...)</div><div class="ttdef"><b>Definition</b> aparsearg.h:254</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a3be8616bb1051b44029738a52980e3e1"><div class="ttname"><a href="#a3be8616bb1051b44029738a52980e3e1">addBoolOpt</a></div><div class="ttdeci">void addBoolOpt(ArgParser parser, char shortOpt, const char *helpOrNull)</div><div class="ttdoc">add bool option, when prasing, upper char means false. For notable matters, see addArgMap</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a47bd55d473e46e2d56a6008ffb6bd092"><div class="ttname"><a href="#a47bd55d473e46e2d56a6008ffb6bd092">addArgMap</a></div><div class="ttdeci">void addArgMap(ArgParser parser, char shortName, const char *longName)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a5950c8c25c7c023846078db2a0989bc7"><div class="ttname"><a href="#a5950c8c25c7c023846078db2a0989bc7">parseArgs</a></div><div class="ttdeci">ParseArgRes parseArgs(ArgParser)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a64358787fe59ae10092afe199a82f069"><div class="ttname"><a href="#a64358787fe59ae10092afe199a82f069">wantOpt</a></div><div class="ttdeci">#define wantOpt(parseArgRes, opt)</div><div class="ttdoc">returns whether opt is given</div><div class="ttdef"><b>Definition</b> aparsearg.h:206</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a7996d8773260f7c0906d547e2adbd927"><div class="ttname"><a href="#a7996d8773260f7c0906d547e2adbd927">addArgHelp</a></div><div class="ttdeci">void addArgHelp(ArgParser parser, const char *itemName, const char *help)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a86e32dc413ef64d57e4b9d74c7929314"><div class="ttname"><a href="#a86e32dc413ef64d57e4b9d74c7929314">getListVal</a></div><div class="ttdeci">#define getListVal(parseArgRes, key)</div><div class="ttdoc">returns a ::ListArg [borrowed]</div><div class="ttdef"><b>Definition</b> aparsearg.h:212</div></div>
+<div class="ttc" id="aaparsearg_8h_html_a9adcfddf48b9fd38cc5ee762f472a280"><div class="ttname"><a href="#a9adcfddf48b9fd38cc5ee762f472a280">addListKey</a></div><div class="ttdeci">void addListKey(ArgParser parser, char shortKey, const char *name, const char *help)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_aab934a607d53d81829a0d206023e677e"><div class="ttname"><a href="#aab934a607d53d81829a0d206023e677e">newArgParser</a></div><div class="ttdeci">ArgParser newArgParser(int argc, char *const argv[], const char *helpOrNul)</div></div>
+<div class="ttc" id="aaparsearg_8h_html_ac13c51c29a0e71393560ab0172250a19"><div class="ttname"><a href="#ac13c51c29a0e71393560ab0172250a19">enInfo</a></div><div class="ttdeci">void enInfo(ArgParser parser, ProjInfo info)</div></div>
+<div class="ttc" id="aseq_8h_html_a7d6186d77c9b23d75d4f7d87d0546e04"><div class="ttname"><a href="seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04">slen_t</a></div><div class="ttdeci">size_t slen_t</div><div class="ttdef"><b>Definition</b> seq.h:15</div></div>
+<div class="ttc" id="aseq_8h_html_a8a0dbf07605ac055fcdb739cce3740d5"><div class="ttname"><a href="seq_8h.html#a8a0dbf07605ac055fcdb739cce3740d5">getItem</a></div><div class="ttdeci">#define getItem</div><div class="ttdef"><b>Definition</b> seq.h:62</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1109821bbfc48e28d2095cc2dab2f8a0"><div class="ttname"><a href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a></div><div class="ttdeci">#define printlnCharSeq(s)</div><div class="ttdef"><b>Definition</b> strimpl.h:41</div></div>
+<div class="ttc" id="astructArgParserObj_html"><div class="ttname"><a href="structArgParserObj.html">ArgParserObj</a></div><div class="ttdef"><b>Definition</b> aparsearg.h:117</div></div>
+<div class="ttc" id="astructParseArgRes_html"><div class="ttname"><a href="structParseArgRes.html">ParseArgRes</a></div><div class="ttdef"><b>Definition</b> aparsearg.h:194</div></div>
+<div class="ttc" id="astructParseArgRes_html_a139bf6bc6f837b497d0bcc5fa808a029"><div class="ttname"><a href="structParseArgRes.html#a139bf6bc6f837b497d0bcc5fa808a029">ParseArgRes::args</a></div><div class="ttdeci">ArgsSeq args</div><div class="ttdef"><b>Definition</b> aparsearg.h:196</div></div>
+<div class="ttc" id="astructParseArgRes_html_a838a5b5da6ce426d8ff53c3031ebcd0f"><div class="ttname"><a href="structParseArgRes.html#a838a5b5da6ce426d8ff53c3031ebcd0f">ParseArgRes::err</a></div><div class="ttdeci">char * err</div><div class="ttdef"><b>Definition</b> aparsearg.h:195</div></div>
+<div class="ttc" id="astructProjInfo_html"><div class="ttname"><a href="structProjInfo.html">ProjInfo</a></div><div class="ttdef"><b>Definition</b> aparsearg.h:257</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="af5a9d9ed914aec4b6b1953770fca37fb" name="af5a9d9ed914aec4b6b1953770fca37fb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af5a9d9ed914aec4b6b1953770fca37fb">&#9670;&#160;</a></span>checkOpOption</h2>
 

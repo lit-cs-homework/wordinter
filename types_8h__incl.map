@@ -1,5 +1,5 @@
 <map id="src/types.h" name="src/types.h">
-<area shape="rect" id="Node000001" title="types for storing data" alt="" coords="52,5,136,31"/>
+<area shape="rect" id="Node000001" title="types for storing data /*doctest:" alt="" coords="52,5,136,31"/>
 <area shape="rect" id="Node000002" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="32,153,84,178"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="93,32,67,138,62,137,88,31"/>
 <area shape="rect" id="Node000005" href="$strimpl_8h.html" title="string implementation" alt="" coords="95,79,165,105"/>

@@ -176,7 +176,54 @@ Functions</h2></td></tr>
 <tr class="memdesc:ab229dce5cdfdeba9b09f64a36d8efd1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">get next paramgragh  <br /></td></tr>
 <tr class="separator:ab229dce5cdfdeba9b09f64a36d8efd1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>/*doctest: </p><div class="fragment"><div class="line"><span class="comment">// ## using stream in a C-style</span></div>
+<div class="line">  CharSeq s = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;Chapter 12. Good-bye&quot;</span>);</div>
+<div class="line">  <a class="code hl_struct" href="structStrStream.html">StrStream</a> stream = <a class="code hl_define" href="#a938b67271f97823841ff85d27875325a">toStrStream</a>(s);</div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">while</span>(1){</div>
+<div class="line">      CharSeq str = <a class="code hl_define" href="#ad7e7496c471cc79cdb3e9278f6a51217">tokenToCharSeq</a>(<a class="code hl_function" href="#a27781300bc6c3f0b715a0122ff54fc7b">nextWord</a>(&amp;stream));</div>
+<div class="line">      <span class="keywordflow">if</span>(str.len==0)<span class="keywordflow">break</span>;</div>
+<div class="line">      printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot; &quot;</span>, str.len);<a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(str);</div>
+<div class="line">      <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(str);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="comment">//-&gt; 7: Chapter</span></div>
+<div class="line">  <span class="comment">//-&gt; 2: 12</span></div>
+<div class="line">  <span class="comment">//-&gt; 8: Good-bye</span></div>
+<div class="line"> </div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(s);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ## word-border-sep</span></div>
+<div class="line">  CharSeq s2 = <a class="code hl_function" href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a>(<span class="stringliteral">&quot;  This is a paragraph\n\n  And the second one,\nstill the 2nd\n\n\n  begin no.3\nalso 3~~\n\n  4&quot;</span>);</div>
+<div class="line">  <a class="code hl_struct" href="structStrStream.html">StrStream</a> stream2 = <a class="code hl_define" href="#a938b67271f97823841ff85d27875325a">toStrStream</a>(s2);</div>
+<div class="line">  </div>
+<div class="line">  <span class="keywordflow">while</span>(1){</div>
+<div class="line">      CharSeq str = <a class="code hl_define" href="#ad7e7496c471cc79cdb3e9278f6a51217">tokenToCharSeq</a>(<a class="code hl_function" href="#ab229dce5cdfdeba9b09f64a36d8efd1a">nextPara</a>(&amp;stream2, <span class="keyword">true</span>));</div>
+<div class="line">      <span class="keywordflow">if</span>(str.len==0)<span class="keywordflow">break</span>;</div>
+<div class="line">      printf(<span class="stringliteral">&quot;%&quot;</span> <a class="code hl_define" href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a> <span class="stringliteral">&quot;: &quot;</span>, str.len);<a class="code hl_define" href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a>(str);</div>
+<div class="line">      <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(str);</div>
+<div class="line">  }</div>
+<div class="line">  <span class="comment">//-&gt; 21:   This is a paragraph</span></div>
+<div class="line">  <span class="comment">//-&gt; 35:   And the second one,</span></div>
+<div class="line">  <span class="comment">//-&gt; still the 2nd</span></div>
+<div class="line">  <span class="comment">//-&gt; 21:   begin no.3</span></div>
+<div class="line">  <span class="comment">//-&gt; also 3~~</span></div>
+<div class="line">  <span class="comment">//-&gt; 3:   4</span></div>
+<div class="line">  <a class="code hl_define" href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a>(s2);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// ## NOTE</span></div>
+<div class="line"><span class="comment">// always firstly `skip` the sep if sep may exist in the begining</span></div>
+<div class="line"><span class="comment">// </span></div>
+<div class="ttc" id="aseq_8h_html_a65adaf7b102d7d322c24092dc6ea7ab3"><div class="ttname"><a href="seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3">PRI_SLEN</a></div><div class="ttdeci">#define PRI_SLEN</div><div class="ttdef"><b>Definition</b> seq.h:16</div></div>
+<div class="ttc" id="aseq_8h_html_a7765a0250c053c80533915a048e26adc"><div class="ttname"><a href="seq_8h.html#a7765a0250c053c80533915a048e26adc">deinitSeq</a></div><div class="ttdeci">#define deinitSeq(seq)</div><div class="ttdef"><b>Definition</b> seq.h:46</div></div>
+<div class="ttc" id="astreams_8h_html_a27781300bc6c3f0b715a0122ff54fc7b"><div class="ttname"><a href="#a27781300bc6c3f0b715a0122ff54fc7b">nextWord</a></div><div class="ttdeci">Token nextWord(StrStream *ps)</div></div>
+<div class="ttc" id="astreams_8h_html_a938b67271f97823841ff85d27875325a"><div class="ttname"><a href="#a938b67271f97823841ff85d27875325a">toStrStream</a></div><div class="ttdeci">#define toStrStream(s)</div><div class="ttdef"><b>Definition</b> streams.h:71</div></div>
+<div class="ttc" id="astreams_8h_html_ab229dce5cdfdeba9b09f64a36d8efd1a"><div class="ttname"><a href="#ab229dce5cdfdeba9b09f64a36d8efd1a">nextPara</a></div><div class="ttdeci">Token nextPara(StrStream *ps, bool multiLineSeq)</div><div class="ttdoc">get next paramgragh</div></div>
+<div class="ttc" id="astreams_8h_html_ad7e7496c471cc79cdb3e9278f6a51217"><div class="ttname"><a href="#ad7e7496c471cc79cdb3e9278f6a51217">tokenToCharSeq</a></div><div class="ttdeci">#define tokenToCharSeq(tok)</div><div class="ttdef"><b>Definition</b> streams.h:56</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1109821bbfc48e28d2095cc2dab2f8a0"><div class="ttname"><a href="strimpl_8h.html#a1109821bbfc48e28d2095cc2dab2f8a0">printlnCharSeq</a></div><div class="ttdeci">#define printlnCharSeq(s)</div><div class="ttdef"><b>Definition</b> strimpl.h:41</div></div>
+<div class="ttc" id="astrimpl_8h_html_a1b1ddc357c566a272f24dc94cf8a036e"><div class="ttname"><a href="strimpl_8h.html#a1b1ddc357c566a272f24dc94cf8a036e">charpToSeq</a></div><div class="ttdeci">CharSeq charpToSeq(const char *p)</div></div>
+<div class="ttc" id="astructStrStream_html"><div class="ttname"><a href="structStrStream.html">StrStream</a></div><div class="ttdef"><b>Definition</b> streams.h:64</div></div>
+</div><!-- fragment --> </div><h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a6d0e98aa4aaed7ab04d6c2d8b0a921b2" name="a6d0e98aa4aaed7ab04d6c2d8b0a921b2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d0e98aa4aaed7ab04d6c2d8b0a921b2">&#9670;&#160;</a></span>forSepStream</h2>
 
@@ -209,7 +256,6 @@ Functions</h2></td></tr>
 <div class="line">    }\</div>
 <div class="line">}</div>
 <div class="ttc" id="astreams_8h_html_aa3e33efe0c660a53ee0b2f85b0cc9352"><div class="ttname"><a href="#aa3e33efe0c660a53ee0b2f85b0cc9352">nextToken</a></div><div class="ttdeci">Token nextToken(StrSepStream *ps)</div></div>
-<div class="ttc" id="astreams_8h_html_ad7e7496c471cc79cdb3e9278f6a51217"><div class="ttname"><a href="#ad7e7496c471cc79cdb3e9278f6a51217">tokenToCharSeq</a></div><div class="ttdeci">#define tokenToCharSeq(tok)</div><div class="ttdef"><b>Definition</b> streams.h:56</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,7 +388,6 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">((<a class="code hl_struct" href="structStrStream.html">StrStream</a>){.idx=0, .data=s})</div>
-<div class="ttc" id="astructStrStream_html"><div class="ttname"><a href="structStrStream.html">StrStream</a></div><div class="ttdef"><b>Definition</b> streams.h:64</div></div>
 </div><!-- fragment -->
 </div>
 </div>
