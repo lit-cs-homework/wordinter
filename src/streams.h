@@ -1,7 +1,7 @@
 
 #ifndef _STREAMS_H
 #define _STREAMS_H
-/// @file stream.h
+/// @file streams.h
 /*doctest:
 
 // ## using stream in a C-style

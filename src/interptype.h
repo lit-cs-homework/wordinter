@@ -2,7 +2,7 @@
 #ifndef _INTERPTYPE_H
 #define _INTERPTYPE_H
 /**
- @file interptype
+ @file interptype.h
  @brief interpreter type
  */
 
