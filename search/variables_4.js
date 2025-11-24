@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['name_0',['name',['../structNamedHelp.html#a8f8f80d37794cde9472343e4487ba3eb',1,'NamedHelp']]]
+  ['err_0',['err',['../structParseArgRes.html#a838a5b5da6ce426d8ff53c3031ebcd0f',1,'ParseArgRes']]]
 ];

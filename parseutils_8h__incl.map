@@ -1,0 +1,17 @@
+<map id="src/parseutils.h" name="src/parseutils.h">
+<area shape="rect" id="Node000001" title="parse utilities" alt="" coords="34,5,143,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,153,79,178"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,32,53,139,48,137,82,31"/>
+<area shape="rect" id="Node000003" href="$strimpl_8h.html" title="string implementation" alt="" coords="99,79,169,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="98,30,121,64,116,67,94,33"/>
+<area shape="poly" id="edge4_Node000003_Node000002" title=" " alt="" coords="120,107,71,145,68,141,117,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="102,153,166,178"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="137,105,137,137,131,137,131,105"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="174,226,233,252"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="147,103,164,125,180,151,192,182,200,210,195,212,187,183,176,154,160,128,143,107"/>
+<area shape="rect" id="Node000006" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="241,153,294,178"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="158,103,232,143,230,147,155,108"/>
+<area shape="poly" id="edge7_Node000006_Node000005" title=" " alt="" coords="259,180,226,217,222,213,255,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="258,226,320,252"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="273,178,283,211,278,212,268,179"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rec_0',['Rec',['../structRec.html',1,'']]]
+  ['strsepstream_0',['StrSepStream',['../structStrSepStream.html',1,'']]],
+  ['strstream_1',['StrStream',['../structStrStream.html',1,'']]]
 ];

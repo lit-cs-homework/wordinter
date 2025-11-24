@@ -1,0 +1,9 @@
+<map id="src/cmsg.h" name="src/cmsg.h">
+<area shape="rect" id="Node000001" title="colored message" alt="" coords="83,5,168,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,65,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,34,64,72,60,67,109,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="89,79,162,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,31,128,63,123,63,123,31"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="186,79,249,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="143,29,192,67,189,72,140,34"/>
+</map>

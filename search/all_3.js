@@ -1,12 +1,19 @@
 var searchData=
 [
-  ['dbop_2eh_0',['dbop.h',['../dbop_8h.html',1,'']]],
-  ['defver_1',['DefVer',['../aparsearg_8h.html#a788240a2eca6880f0b44ebe84811a8fc',1,'aparsearg.h']]],
-  ['deinfo_2',['deInfo',['../aparsearg_8h.html#a10678d6cb0dcf44940d1c96a8e3b1034',1,'aparsearg.c']]],
-  ['deinitseq_3',['deinitSeq',['../seq_8h.html#a7765a0250c053c80533915a048e26adc',1,'seq.h']]],
-  ['direxists_4',['dirExists',['../fsutils_8h.html#af0617b8dfea2efc7bb32de80a4b6a30c',1,'fsutils.c']]],
-  ['dirscanstat_5',['DirScanStat',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0',1,'fsutils.h']]],
-  ['dpres_6',['DPres',['../structDPres.html',1,'']]],
-  ['dscantopen_7',['dsCantOpen',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0ae883b2a70102da5f106cc2c0437d7fd1',1,'fsutils.h']]],
-  ['dsitemskipped_8',['dsItemSkipped',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0a9ada89e7f4a98f4d2ce5698e59a886d8',1,'fsutils.h']]]
+  ['data_0',['data',['../structStrSepStream.html#aaf891c8c3fcfe744f29aeefd1418e9db',1,'StrSepStream::data'],['../structStrStream.html#aaf891c8c3fcfe744f29aeefd1418e9db',1,'StrStream::data'],['../structRec.html#aaf891c8c3fcfe744f29aeefd1418e9db',1,'Rec::data']]],
+  ['db_1',['db',['../structInterpreter.html#ace61d217112ac6c159b454150a40b166',1,'Interpreter']]],
+  ['dbop_2eh_2',['dbop.h',['../dbop_8h.html',1,'']]],
+  ['def_3',['DEF',['../cmsg_8h.html#a397419fc12b37ed479c8abb9d444d843',1,'cmsg.h']]],
+  ['def_5fseq_5fcap_4',['DEF_SEQ_CAP',['../seq_8h.html#af0ac05cf8b647c18f3b23a7e47680c73',1,'seq.h']]],
+  ['deflicense_5',['DefLicense',['../aparsearg_8h.html#a22a9963c86c06848bc99b703315f3ae7',1,'aparsearg.h']]],
+  ['defver_6',['DefVer',['../aparsearg_8h.html#a788240a2eca6880f0b44ebe84811a8fc',1,'aparsearg.h']]],
+  ['deinfo_7',['deInfo',['../aparsearg_8h.html#a10678d6cb0dcf44940d1c96a8e3b1034',1,'aparsearg.h']]],
+  ['deinitseq_8',['deinitSeq',['../seq_8h.html#a7765a0250c053c80533915a048e26adc',1,'seq.h']]],
+  ['desc_9',['Desc',['../main_8h.html#a8e5dd6ab2cd68e97af6feac08709ee95',1,'main.h']]],
+  ['desc_10',['desc',['../structProjInfo.html#a710bce51374aba96ab04912897666c35',1,'ProjInfo']]],
+  ['direxists_11',['dirExists',['../fsutils_8h.html#af0617b8dfea2efc7bb32de80a4b6a30c',1,'fsutils.h']]],
+  ['dirscanstat_12',['DirScanStat',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0',1,'fsutils.h']]],
+  ['dscantopen_13',['dsCantOpen',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0ae883b2a70102da5f106cc2c0437d7fd1',1,'fsutils.h']]],
+  ['dsitemskipped_14',['dsItemSkipped',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0a9ada89e7f4a98f4d2ce5698e59a886d8',1,'fsutils.h']]],
+  ['dssucc_15',['dsSucc',['../fsutils_8h.html#a44dc58fa98a41d578a0b0edefe9dbaa0a728601db37728794a7f2815a68bea64a',1,'fsutils.h']]]
 ];

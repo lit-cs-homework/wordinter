@@ -1,6 +1,7 @@
 var strutils_8h =
 [
-    [ "PairS", "structPairS.html", null ],
+    [ "PairS", "structPairS.html", "structPairS" ],
+    [ "freePairS", "strutils_8h.html#a6702e5d42e4a1f460de4e6c8312d6139", null ],
     [ "getLine", "strutils_8h.html#a44da6d8756b26b0ae82b3bef1cc924bf", null ],
     [ "parseInt", "strutils_8h.html#a1c935b6cebd8d3ca8aa3fa081cd73d24", null ],
     [ "parseSize", "strutils_8h.html#af1a4fafe34a512cd66ceb39b15227aca", null ],

@@ -1,0 +1,14 @@
+<map id="src/strimpl.h" name="src/strimpl.h">
+<area shape="rect" id="Node000001" title="string implementation" alt="" coords="120,5,212,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,69,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="146,34,74,73,71,69,143,29"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="92,79,166,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="163,32,145,66,140,64,158,30"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="174,153,233,178"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="172,31,199,137,194,138,167,32"/>
+<area shape="rect" id="Node000005" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="242,79,294,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="185,29,239,67,236,72,182,34"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="259,107,226,143,222,139,255,103"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="258,153,320,178"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="274,104,284,137,278,138,269,106"/>
+</map>

@@ -1,0 +1,18 @@
+<map id="src/aparsearg.h" name="src/aparsearg.h">
+<area shape="rect" id="Node000001" title="ascii ahpha parse cmdline argument" alt="" coords="159,5,270,31"/>
+<area shape="rect" id="Node000002" href="$strimpl_8h.html" title="string implementation" alt="" coords="131,79,202,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="209,33,185,67,181,64,204,30"/>
+<area shape="rect" id="Node000008" href="$cstrutils_8h.html" title="c&#45;string utilities" alt="" coords="225,79,302,105"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="225,30,249,65,245,68,220,33"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="5,153,69,178"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="146,108,74,147,71,142,143,103"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="92,153,166,178"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="163,106,145,140,140,138,158,104"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="174,226,233,252"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="172,104,199,211,194,212,167,106"/>
+<area shape="rect" id="Node000006" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="242,153,294,178"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="185,103,239,141,236,145,182,107"/>
+<area shape="poly" id="edge6_Node000006_Node000005" title=" " alt="" coords="259,180,226,217,222,213,255,177"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="258,226,320,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="274,178,284,211,278,212,269,179"/>
+</map>

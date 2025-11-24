@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['usages_0',['usages',['../structUsages.html',1,'Usages'],['../aparsearg_8h.html#a27e7fa06ae35c4dff98f9041f3572581',1,'USAGES:&#160;aparsearg.h']]]
+  ['saybye_0',['sayBye',['../cmsg_8h.html#aa1602473458b5f957cc2f7293b3df0af',1,'cmsg.h']]],
+  ['searchby_1',['searchBy',['../seq_8h.html#a2163beda15c69ba85a2f868244b0ebe2',1,'seq.h']]],
+  ['sep_2',['sep',['../structStrSepStream.html#a2f44b091be60ccdd664997eb163d2ff4',1,'StrSepStream']]],
+  ['seq_3',['Seq',['../seq_8h.html#af448415535ca44dbca40b3d0cf053943',1,'Seq:&#160;seq.h'],['../aparsearg_8h.html#ade672b583b3624daf98a7a809195bcd7',1,'Seq(CharSeq) ListArg:&#160;aparsearg.h'],['../aparsearg_8h.html#a4c0dc8a2e7a66482f91950db0fcdb52e',1,'Seq(char *) CpSeq:&#160;aparsearg.h'],['../strimpl_8h.html#a24b70648f0a868594b5bad63275d86e4',1,'Seq(char) CharSeq:&#160;strimpl.h'],['../types_8h.html#a26581ff9becc42483abe088a15773f73',1,'Seq(Pos) PosSeq:&#160;types.h'],['../types_8h.html#ade5eb0bfea4d97eaf59ce33a9214d8a7',1,'Seq(Rec) RecSeq:&#160;types.h']]],
+  ['seq_4',['seq',['../structUsages.html#ae03131ca28ceac1b7c8f5de5784ae4fb',1,'Usages']]],
+  ['seq_2eh_5',['seq.h',['../seq_8h.html',1,'']]],
+  ['seq_5fcheck_5frange_6',['SEQ_CHECK_RANGE',['../cnf_8h.html#aa35fcdcf6cc11fe02ca439f9c97451c8',1,'cnf.h']]],
+  ['seqeqseq_7',['seqEqSeq',['../seq_8h.html#a476fad32f93fe96689e78d8496f6f86f',1,'seq.h']]],
+  ['seqeqstr_8',['seqEqStr',['../strimpl_8h.html#a1353ad5009bc593299bbc3e61cdca7b1',1,'strimpl.h']]],
+  ['seqieqstr_9',['seqIEqStr',['../strutils_8h.html#a6807df7a0c579c98591cd2af84cd27e1',1,'strutils.h']]],
+  ['setitem_10',['setItem',['../seq_8h.html#aa41a3e6f94af5931901dba04b160d475',1,'seq.h']]],
+  ['singlelineparaflag_11',['singleLineParaFlag',['../main_8h.html#a9c7a67dfd1a0c57f1b8454e86d3b4d8f',1,'main.h']]],
+  ['skip_12',['skip',['../parseutils_8h.html#ad5adca7deca0c22a02d3e7fc537527fb',1,'parseutils.h']]],
+  ['skipw_13',['skipW',['../parseutils_8h.html#a2789aaddd98725e6258ea4b8dd1a6ecc',1,'parseutils.h']]],
+  ['slen_5ft_14',['slen_t',['../seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04',1,'seq.h']]],
+  ['split2_15',['split2',['../strutils_8h.html#a25fd3240ed0eb3a58c3747daa34f61db',1,'strutils.h']]],
+  ['splitquo2_16',['splitQuo2',['../strutils_8h.html#ae7a78dc49f488de9f6e7c60dae88c5f5',1,'strutils.h']]],
+  ['stradd_17',['strAdd',['../strutils_8h.html#a3fdaabb875dc38f27849e2765f47824f',1,'strutils.h']]],
+  ['streams_2eh_18',['streams.h',['../streams_8h.html',1,'']]],
+  ['strimpl_2eh_19',['strimpl.h',['../strimpl_8h.html',1,'']]],
+  ['strsepstream_20',['StrSepStream',['../structStrSepStream.html',1,'']]],
+  ['strstream_21',['StrStream',['../structStrStream.html',1,'']]],
+  ['strutils_2eh_22',['strutils.h',['../strutils_8h.html',1,'']]],
+  ['substr_23',['subStr',['../strutils_8h.html#adceb21e62963fe320c8cd691dd44abd5',1,'strutils.h']]],
+  ['substrfrom_24',['subStrFrom',['../strutils_8h.html#a6e6ba6a1708b4b3b32949738da4ded03',1,'strutils.h']]]
 ];

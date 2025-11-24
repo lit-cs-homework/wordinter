@@ -1,0 +1,22 @@
+<map id="src/fsutils.h" name="src/fsutils.h">
+<area shape="rect" id="Node000001" title="filesystem interface utilities, support both POSIX c compiler like gcc and MSVC" alt="" coords="129,5,217,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="191,300,251,326"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="156,34,104,71,75,97,47,126,25,157,11,189,10,220,14,235,23,250,38,266,55,279,95,297,137,306,176,310,176,315,136,312,93,302,52,284,34,270,19,254,9,238,5,221,6,188,20,154,43,123,71,93,101,67,153,29"/>
+<area shape="rect" id="Node000003" href="$types_8h.html" title="types for storing data" alt="" coords="142,79,204,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="176,31,176,63,170,63,170,31"/>
+<area shape="rect" id="Node000009" href="$cstrutils_8h.html" title="c&#45;string utilities" alt="" coords="228,79,305,105"/>
+<area shape="poly" id="edge11_Node000001_Node000009" title=" " alt="" coords="190,29,240,67,237,72,187,34"/>
+<area shape="rect" id="Node000004" href="$seq_8h.html" title="macros for a generics sequence" alt="" coords="269,226,322,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="185,103,278,213,274,216,181,107"/>
+<area shape="rect" id="Node000006" href="$strimpl_8h.html" title="string implementation" alt="" coords="138,153,208,178"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="176,105,176,137,170,137,170,105"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="285,254,246,291,242,287,281,251"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="275,300,337,326"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="300,252,305,284,300,285,295,253"/>
+<area shape="poly" id="edge9_Node000006_Node000002" title=" " alt="" coords="183,177,207,225,221,284,215,285,202,227,178,180"/>
+<area shape="poly" id="edge10_Node000006_Node000004" title=" " alt="" coords="195,177,263,216,261,221,192,181"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="33,226,97,252"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="156,181,98,220,95,215,153,177"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="120,226,194,252"/>
+<area shape="poly" id="edge8_Node000006_Node000008" title=" " alt="" coords="173,179,166,211,160,210,168,178"/>
+</map>

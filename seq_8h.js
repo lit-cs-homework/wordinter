@@ -1,9 +1,25 @@
 var seq_8h =
 [
+    [ "addItem", "seq_8h.html#aa9ece2e730692bbdeddf2f1585ea2d6f", null ],
+    [ "checkedGetItem", "seq_8h.html#af4ddce5a1275f0e939d2f1398bebdc98", null ],
+    [ "checkedSetItem", "seq_8h.html#a73137ce14150d5c31bc56a6b859f12d0", null ],
+    [ "clearSeq", "seq_8h.html#a814f8d8f67c5a0d983559f0e4c86f4d1", null ],
+    [ "DEF_SEQ_CAP", "seq_8h.html#af0ac05cf8b647c18f3b23a7e47680c73", null ],
     [ "deinitSeq", "seq_8h.html#a7765a0250c053c80533915a048e26adc", null ],
     [ "findIndex", "seq_8h.html#a981c284f0fefaf7e85fa6e1130435eaa", null ],
     [ "forEach", "seq_8h.html#a2370a467acdd1f699e4e469b00ce62b6", null ],
     [ "forIndex", "seq_8h.html#a66278b9d36c431fe2b7f071ceef07b95", null ],
+    [ "getItem", "seq_8h.html#a8a0dbf07605ac055fcdb739cce3740d5", null ],
+    [ "IndexError", "seq_8h.html#af3db6627b11c0f69dab1bf6399efc927", null ],
     [ "initSeq", "seq_8h.html#a9806af1e1680fc42a9611505261a34c8", null ],
-    [ "initSeqOfLen", "seq_8h.html#aeac39b8b0cace584466dddd175c8ee74", null ]
+    [ "initSeqOfLen", "seq_8h.html#aeac39b8b0cace584466dddd175c8ee74", null ],
+    [ "pAddItem", "seq_8h.html#a5268e51e5adc44789e3899ceddf0d37c", null ],
+    [ "PRI_SLEN", "seq_8h.html#a65adaf7b102d7d322c24092dc6ea7ab3", null ],
+    [ "searchBy", "seq_8h.html#a2163beda15c69ba85a2f868244b0ebe2", null ],
+    [ "Seq", "seq_8h.html#af448415535ca44dbca40b3d0cf053943", null ],
+    [ "seqEqSeq", "seq_8h.html#a476fad32f93fe96689e78d8496f6f86f", null ],
+    [ "setItem", "seq_8h.html#aa41a3e6f94af5931901dba04b160d475", null ],
+    [ "uncheckedGetItem", "seq_8h.html#a9a211000a8cd51e742852aafc51092fb", null ],
+    [ "uncheckedSetItem", "seq_8h.html#a40ad40592b2f69e5eb4b67736994a7f1", null ],
+    [ "slen_t", "seq_8h.html#a7d6186d77c9b23d75d4f7d87d0546e04", null ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['help_0',['help',['../structNamedHelp.html#ad7ec84b4d1c84a2d1af0c0de9ea5b86f',1,'NamedHelp::help'],['../structArgParserObj.html#ad7ec84b4d1c84a2d1af0c0de9ea5b86f',1,'ArgParserObj::help']]]
+  ['booloptadded_0',['boolOptAdded',['../structArgParserObj.html#a00f6a87fe2cf9cf63d5d103968e056a1',1,'ArgParserObj']]]
 ];
