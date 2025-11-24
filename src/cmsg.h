@@ -34,9 +34,6 @@ enum cmsg_EnableColorLevel {
     clOnAnyWay,
 };
 
-/**
-  @param enableColor if enable color for following info/warn/err
-*/
 int cmsgCfg(enum cmsg_EnableColorLevel cl);
 
 
