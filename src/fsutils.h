@@ -48,7 +48,7 @@ RecSeq listDir(const char* dir);
     @note any subdirectory will be skipped
     @returns whether to append
 */
-enum DirScanStat pushInDir(RecSeq*p, const char*dir, void fallback(const char* filename));
+enum DirScanStat pushInDir(RecSeq*p, const char*dir, void (*fallback)(const char* filename));
 
 
 /** push file content as record to a @ref RecSeq pointer
