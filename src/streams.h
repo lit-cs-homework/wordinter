@@ -11,7 +11,7 @@
   while(1){
       CharSeq str = tokenToCharSeq(nextWord(&stream));
       if(str.len==0)break;
-      printf(":" PRI_SLEN " ", str.len);printlnCharSeq(str);
+      printf("%" PRI_SLEN " ", str.len);printlnCharSeq(str);
       deinitSeq(str);
   }
   //-> 7: Chapter
