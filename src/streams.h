@@ -1,9 +1,9 @@
 
 #ifndef _STREAMS_H
 #define _STREAMS_H
-/// @file streams.h
+/** @file streams.h
 /*doctest:
-
+// @code
 // ## using stream in a C-style
   CharSeq s = charpToSeq("Chapter 12. Good-bye");
   StrStream stream = toStrStream(s);
@@ -40,7 +40,7 @@
 
 // ## NOTE
 // always firstly `skip` the sep if sep may exist in the begining
-
+// @endcode
 */
 
 #include <stdbool.h>

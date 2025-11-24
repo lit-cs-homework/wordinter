@@ -4,8 +4,9 @@
 /**
  @file parseutils.h
  @brief parse utilities
-*/
+
 /*doctest:
+// @code
 
 // # for one certain char
   CharSeq s = charpToSeq("a   String");
@@ -50,7 +51,7 @@
 
   deinitSeq(ss3);
   deinitSeq(s3);
-
+// @endcode
 
 */
 #include <stdbool.h>

@@ -4,8 +4,8 @@
 /**
  @file interpreter.h
  @brief for REPL
-*/
 /*doctest:
+// @code
   RecSeq seq;
   initSeq(Rec, seq);
 
@@ -24,7 +24,7 @@
 
   Interpreter interp = initInterpreter(seq, true);
   enterRepl(&interp);
-
+// @endcode
 
 */
 

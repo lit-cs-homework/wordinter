@@ -9,9 +9,9 @@
   @note for opt arg, only one char is stored. e.g. -A is a oppsite flag of -a
 
   @attention latter arg value will overwrite the former value
-*/
 
 /*doctest:
+//@code
   #define argc_ 3
   char* argv_[argc_+1] = {"./main", "-l", "-c",  NULL};
 
@@ -70,7 +70,7 @@
 
   freeParseArgRes(res);
   freeArgParser(parser);
-
+//@endcode
 */
 
 #include "strimpl.h"

@@ -4,9 +4,9 @@
 /**
  @file strimpl.h
  @brief string implementation
- */
 
 /*doctest: include("<assert.h>")
+// @code
   CharSeq s = charpToSeq("This is a String");
   printlnCharSeq(s); //-> This is a String
 
@@ -24,7 +24,7 @@
 
   assert( !seqEqStr(s, "This") );
   assert( !seqEqStr(s, "This is a String abc") );
-
+// @endcode
 */
 
 #include <string.h>

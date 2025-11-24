@@ -5,9 +5,9 @@
 /**
  @file fsutils.h
  @brief filesystem interface utilities, support both POSIX c compiler like `gcc` and `MSVC`
-*/
 
 /*doctest: include("<assert.h>")
+// @code
   char*cdir = ".";
   assert(dirExists(cdir));
   RecSeq seq = listDir(cdir);
@@ -19,6 +19,7 @@
     CharSeq content = rec.data;
     printf("%s len: %d\n", rec.fname, content.len);
   }
+// @endcode
 */
 
 #include <stdio.h>

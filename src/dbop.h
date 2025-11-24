@@ -6,9 +6,9 @@
  @file dbop.h
  @brief data base operations
  @details some functions to operate @ref Interpreter
-*/
 
 /*doctest:
+// @code
   RecSeq seq;
   initSeq(Rec, seq);
 
@@ -37,7 +37,7 @@
 
   printf("%zu\n", fre);
 
-
+// @endcode
 */
 #include "types.h"
 #include "streams.h"

@@ -7,9 +7,10 @@
  @brief string utilities
 
  utilities of @ref CharSeq
-*/ 
+
 
 /*doctest: include("<assert.h>")
+// @code
   CharSeq s = charpToSeq("The order is 3");
 
 // # split2
@@ -58,6 +59,7 @@ if(false){
   printf("%d\n", ieq);
   deinitSeq(s);
   }
+// @endcode
 */
 
 #include <stdbool.h>
