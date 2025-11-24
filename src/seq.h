@@ -14,6 +14,7 @@
 #define DEF_SEQ_CAP 10
 typedef size_t slen_t;
 #define PRI_SLEN "zu"
+/// sequence type, written as `seq[T]` in nim-lang
 #define Seq(T) struct{\
     T*data;\
     slen_t len;\

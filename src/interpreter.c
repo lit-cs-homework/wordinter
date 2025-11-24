@@ -185,7 +185,9 @@ enum Flag evalCmd(Interpreter* pinterp, const CharSeq cmd){
         }\
     }while(0)
 
-    /**
+    // NOTE: If using `/**` below, Doxygen considers it as evalCmd's doc,
+    //  as long as `HIDE_IN_BODY_DOCS` is YES (default)
+    /*
      @param[out] argIn char*
      @param[in] flag bool if get @p flagStr, assign as true
     */

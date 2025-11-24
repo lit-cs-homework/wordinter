@@ -8,7 +8,7 @@
  
  plus message to alert compared with @ref fsutils.h
 
- @note do not forget firstly @ref cmsgCfg
+ @note do not forget firstly call ::cmsgCfg
 */
 #include "cmsg.h"
 #include "fsutils.h"

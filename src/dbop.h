@@ -58,8 +58,8 @@ bool queryAll(const Interpreter interp, const char* word, bool ignoreCase);
 
 /** count word numbers in paragragh @p para of file at @p fileOrd
  @param fileOrd file order counting from 1 (Not 0)
- @retval @ref FileNotFoundErr if no record with @p fileOrd can be found(i.e. out of range)
- @retval @ref IndexErr if @p para is over range
+ @retval FileNotFoundErr if no record with @p fileOrd can be found(i.e. out of range)
+ @retval IndexErr if @p para is over range
 */ 
 size_t countWordOf(const Interpreter interp, slen_t fileOrd, size_t para);
 

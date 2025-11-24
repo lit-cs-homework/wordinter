@@ -33,7 +33,7 @@ typedef struct{
     CharSeq data;
 } Rec; ///< record of file data
 
-
+/// @ref Seq of @ref Rec
 typedef Seq(Rec) RecSeq;
 
 #endif //#ifndef _TYPES_H

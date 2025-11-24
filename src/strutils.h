@@ -68,6 +68,8 @@ typedef struct {
     CharSeq left, right;
 } PairS;
 
+/// @pre split2
+/// @pre splitQuo2
 #define freePairS(p) do{\
   deinitSeq(p.left);\
   deinitSeq(p.right);\
@@ -76,7 +78,7 @@ typedef struct {
 
 /** get a line from `stdin`
  @retval `an empty CharSeq` if eof
- @retval a @ref CharSeq that includes newline char*/
+ @retval CharSeq that includes newline char*/
 CharSeq getLine();
 
 /** like Python's `s.split(sep, 1)`

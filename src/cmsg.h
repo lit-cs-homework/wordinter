@@ -34,10 +34,11 @@ enum cmsg_EnableColorLevel {
     clOnAnyWay,
 };
 
+/// configure message color based on @p cl
 int cmsgCfg(enum cmsg_EnableColorLevel cl);
 
 
-/// like cmsgCfg() but will give a warning if cfg fails
+/// like ::cmsgCfg but will give a warning if cfg fails
 int cmsgWarnOnFailCfg(enum cmsg_EnableColorLevel enableColorLevel);
 
 

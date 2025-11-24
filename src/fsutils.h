@@ -62,7 +62,7 @@ bool pushFile(RecSeq*p, const char* fpath);
 void freeListDir(RecSeq rs);
 
 /**
-  @attention if not define READ_KEEP_R (default), then discard '\r'
+  @attention if not define READ_KEEP_R (default), then discard '\\r'
 */
 CharSeq readAll(FILE* f);
 

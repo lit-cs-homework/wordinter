@@ -91,7 +91,6 @@
     }\
 }while(0)
 
-
 typedef Seq(CharSeq) ListArg;
 typedef Seq(CharSeq) ArgsSeq;
 
@@ -154,6 +153,7 @@ ArgParser newArgParser(int argc, char* const argv[],
 */
 void addNote(ArgParser parser, const char* help);
 
+/// @pre @ref newArgParser
 void freeArgParser(ArgParser parser);
 
 /**
@@ -208,7 +208,7 @@ void freeParseArgRes(ParseArgRes res);
 
 #define getVal(parseArgRes, key) (parseArgRes.keyvals[_MapOrd(key)]) ///< returns a c-string[borrowed]. i.e. `char*`
 
-/// returns a @ref ListArg [borrowed]
+/// returns a ::ListArg [borrowed]
 #define getListVal(parseArgRes, key) (parseArgRes.keyListvals[_MapOrd(key)])
 
 

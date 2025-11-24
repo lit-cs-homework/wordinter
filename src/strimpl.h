@@ -32,6 +32,7 @@
 #include <stdio.h>
 #include "seq.h"
 
+/// @ref Seq of char
 typedef Seq(char) CharSeq;
 
 // no newline
