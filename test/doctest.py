@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 'doctest for c code'
 from __future__ import annotations
 
@@ -6,6 +7,7 @@ import os,sys
 
 from pathutils import *
 import ccode as code
+from ccode import Compiler
 
 class Dir:
     base = Path("..").absolute()
@@ -56,7 +58,7 @@ DEBUG = True
 if DEBUG:
   ARGS.append(" -g ")
 
-def _doctest(fp: Path) -> int:
+def _doctest(fp: Path, compiler: Compiler) -> int:
     hfp = fp.with_suffix('.h')
     cfp = fp.with_suffix('.c')
     test_body = ''
@@ -90,13 +92,13 @@ def _doctest(fp: Path) -> int:
     
     if cfp.exists(): deps.append(cfp)
     
-    objs = code.compile.obj(deps, lambda fp: D.obj_cache/(fp.with_suffix('.o').name), args=ARGS )
+    objs = compiler.obj( deps, lambda fp: D.obj_cache/(fp.with_suffix(compiler.obj_suffix).name), args=ARGS )
     
     files = objs + [ t_fp ]
     
     outfn = t_fp.with_suffix('')
     
-    code.compile.exe( files, outfn, args=ARGS )
+    compiler.exe( files, outfn, args=ARGS )
     
     ret = os.system(str(outfn))
     
@@ -104,12 +106,12 @@ def _doctest(fp: Path) -> int:
 
 
 def doctest(fp: Path):
-    code.compile = code.Compile(str(fp.parent))
+    compiler = Compiler(str(fp.parent))
     cwd = os.getcwd()
     ret = 1
     try:
         os.chdir(fp.parent)
-        ret = _doctest(fp)
+        ret = _doctest(fp, compiler)
     finally:
         os.chdir(cwd)
     return ret

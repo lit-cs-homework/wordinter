@@ -24,10 +24,10 @@ int main(int argc, char* argv[]){{
 }}
 {tail}
 """
-StrOrPath = Union[str, Path[str]]
+StrOrPath = Union[str, Path]
 
 
-class Compile:
+class Compiler:
     cc = 'gcc'
     shared_arg = '-shared'
     obj_arg = '-c'
@@ -64,8 +64,12 @@ class Compile:
 
     #def so(self, files: list): return self.compile(files, args=[self.shared_arg])
     
-    def obj(self, files: list, output_cb=lambda s: with_ext(s, '.o'), args=[]): return self.compile_list(files, output_cb, [self.obj_arg]+args)
-    
+    obj_suffix = '.o'
+    def obj(self, files: list, output_cb=None, args=[]):
+        return self.compile_list(files,
+            output_cb or (lambda s: with_ext(s, self.obj_suffix)),
+            [self.obj_arg]+args)
+
     def exe(self, files: list, outfn, args=[]) -> int:
         sargs = ' '.join(args)
         sfiles = ''
