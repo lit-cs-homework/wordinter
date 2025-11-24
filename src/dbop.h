@@ -23,15 +23,17 @@
 
   Interpreter interp = initInterpreter(seq, true);
 
+  const bool ignoreCase = false;
   char* word = "is";
-  queryAll(interp, word);
+  queryAll(interp, word, ignoreCase);
 
-  size_t cnt = countWordOf(interp, "f1", 2);
+  size_t cnt = countWordOf(interp, 1 // ord of "f1"
+    , 2);
 
   printf("%zu\n", cnt);
 
 
-  size_t fre = countFrequency(interp, word);
+  size_t fre = countFrequency(interp, word, ignoreCase);
 
   printf("%zu\n", fre);
 
