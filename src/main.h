@@ -35,7 +35,7 @@ const char* Notes[] = {
 #include "aparsearg.h"
 #include "fsinter.h"
 #include "interpreter.h"
-/// add usage for @ref main CLI
+/// add usage for main CLI
 Usages genUsage(){ return USAGES(
              "[-l|-L] [-c,--code CODE] [dir|[-f,--file FILE] ...]\t run code and exit"
             ,"[-l|-L] [dir|[-f,--file FILE] ...]\t\t\t enter REPL"
