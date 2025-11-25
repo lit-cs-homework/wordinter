@@ -10,8 +10,10 @@
 
   @attention latter arg value will overwrite the former value
 
+  <!--
 /*doctest:
-//@code
+//--> @par Example:
+// @code
   #define argc_ 3
   char* argv_[argc_+1] = {"./main", "-l", "-c",  NULL};
 
@@ -70,7 +72,7 @@
 
   freeParseArgRes(res);
   freeArgParser(parser);
-//@endcode
+// @endcode
 */
 
 #include "strimpl.h"

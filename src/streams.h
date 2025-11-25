@@ -2,7 +2,10 @@
 #ifndef _STREAMS_H
 #define _STREAMS_H
 /** @file streams.h
+
+  <!--
 /*doctest:
+//--> @par Example:
 // @code
 // ## using stream in a C-style
   CharSeq s = charpToSeq("Chapter 12. Good-bye");

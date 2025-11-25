@@ -6,7 +6,9 @@
  @file fsutils.h
  @brief filesystem interface utilities, support both POSIX c compiler like `gcc` and `MSVC`
 
+  <!--
 /*doctest: include("<assert.h>")
+//--> @par Example:
 // @code
   char*cdir = ".";
   assert(dirExists(cdir));

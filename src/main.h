@@ -4,6 +4,7 @@
  * 
  *  
  *  support both `CLI` and `REPL`
+ *  @sa <https://github.com/lit-cs-homework/wordinter> (source code)
  */
 #ifndef _MAIN_H
 #define _MAIN_H

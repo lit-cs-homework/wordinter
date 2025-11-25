@@ -7,7 +7,9 @@
  @file types.h
  @brief types for storing data
 
+  <!--
 /*doctest:
+//--> @par Example:
 // @code
   Pos pos = {"fname", 3, 2};
   printPos(pos);

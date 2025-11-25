@@ -5,7 +5,9 @@
  @file strimpl.h
  @brief string implementation
 
+  <!--
 /*doctest: include("<assert.h>")
+//--> @par Example:
 // @code
   CharSeq s = charpToSeq("This is a String");
   printlnCharSeq(s); //-> This is a String

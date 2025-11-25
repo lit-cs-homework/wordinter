@@ -5,7 +5,9 @@
  @file parseutils.h
  @brief parse utilities
 
+  <!--
 /*doctest:
+//--> @par Example:
 // @code
 
 // # for one certain char

@@ -7,7 +7,9 @@
  @brief data base operations
  @details some functions to operate @ref Interpreter
 
+  <!--
 /*doctest:
+//--> @par Example:
 // @code
   RecSeq seq;
   initSeq(Rec, seq);

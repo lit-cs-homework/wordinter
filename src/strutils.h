@@ -8,8 +8,9 @@
 
  utilities of @ref CharSeq
 
-
+  <!--
 /*doctest: include("<assert.h>")
+//--> @par Example:
 // @code
   CharSeq s = charpToSeq("The order is 3");
 

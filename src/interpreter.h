@@ -4,7 +4,10 @@
 /**
  @file interpreter.h
  @brief for REPL
+
+  <!--
 /*doctest:
+//--> @par Example:
 // @code
   RecSeq seq;
   initSeq(Rec, seq);
