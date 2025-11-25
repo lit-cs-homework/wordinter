@@ -110,7 +110,7 @@ static int fcolorPri(FILE* f, int ci, const char* s){
 }
 
 int fnocolorPri(FILE* f, int _, const char* s){
-    fmsg(f, s);
+    return fmsg(f, s);
 }
 
 int fcolorPriIfNoTty(FILE* f, int ci, const char* s){
@@ -158,5 +158,5 @@ int cmsgCfg(enum cmsg_EnableColorLevel cl){
 }
 
 int cmsgWarnOnFailCfg(enum cmsg_EnableColorLevel enableColorLevel){
-    (cmsgCfg(enableColorLevel)==0||warn("can't init color output"));
+    return (cmsgCfg(enableColorLevel)==0||warn("can't init color output"));
 }
