@@ -84,7 +84,7 @@ Ret:
 bool priHelpOf(const CharSeq dest){
     size_t ord = cmdOrd(dest);
     const char*help;
-    bool found = ord==-1;
+    bool found = ord!=-1;
     if(found){
         help=(char*)HELP[ord];
     }else{
