@@ -5,5 +5,6 @@ var searchData=
   ['unix_5fos_5fsep_2',['UNIX_OS_SEP',['../cstrutils_8h.html#a802b6332a7d329f2989df2dd52537d22',1,'cstrutils.h']]],
   ['usages_3',['USAGES',['../aparsearg_8h.html#a27e7fa06ae35c4dff98f9041f3572581',1,'aparsearg.h']]],
   ['usages_4',['Usages',['../structUsages.html',1,'']]],
-  ['usages_5',['usages',['../structProjInfo.html#a1db8d7fd79b70da9e6bb84208fee641b',1,'ProjInfo']]]
+  ['usages_5',['usages',['../structProjInfo.html#a1db8d7fd79b70da9e6bb84208fee641b',1,'ProjInfo']]],
+  ['usageseq_6',['UsageSeq',['../aparsearg_8h.html#aea1e161b67d23525403467b792f7a41a',1,'aparsearg.h']]]
 ];

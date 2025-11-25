@@ -5,6 +5,7 @@ var aparsearg_8h =
     [ "ParseArgRes", "structParseArgRes.html", "structParseArgRes" ],
     [ "Usages", "structUsages.html", "structUsages" ],
     [ "ProjInfo", "structProjInfo.html", "structProjInfo" ],
+    [ "CharSeqSeq_", "aparsearg_8h.html#adc4d834138a096a4fc3c58f8bf63c29c", null ],
     [ "checkOpOption", "aparsearg_8h.html#af5a9d9ed914aec4b6b1953770fca37fb", null ],
     [ "checkOption", "aparsearg_8h.html#a8d8f77207d6abf0cdb51bcfcdf39bfba", null ],
     [ "DefLicense", "aparsearg_8h.html#a22a9963c86c06848bc99b703315f3ae7", null ],
@@ -18,6 +19,10 @@ var aparsearg_8h =
     [ "USAGES", "aparsearg_8h.html#a27e7fa06ae35c4dff98f9041f3572581", null ],
     [ "wantOpt", "aparsearg_8h.html#a64358787fe59ae10092afe199a82f069", null ],
     [ "ArgParser", "aparsearg_8h.html#a3b671fe09d8531ad75cea8a2de0b9eb0", null ],
+    [ "ArgsSeq", "aparsearg_8h.html#a9900ca5126722087d8feb02e1016d6c8", null ],
+    [ "CpSeq", "aparsearg_8h.html#afec9de4dfcb6a0c5764c4406eebe7601", null ],
+    [ "ListArg", "aparsearg_8h.html#ab448b3ec1b63ecc807fe407bb5ad60b2", null ],
+    [ "UsageSeq", "aparsearg_8h.html#aea1e161b67d23525403467b792f7a41a", null ],
     [ "addArgHelp", "aparsearg_8h.html#a7996d8773260f7c0906d547e2adbd927", null ],
     [ "addArgMap", "aparsearg_8h.html#a47bd55d473e46e2d56a6008ffb6bd092", null ],
     [ "addBoolOpt", "aparsearg_8h.html#a3be8616bb1051b44029738a52980e3e1", null ],
@@ -33,7 +38,5 @@ var aparsearg_8h =
     [ "newUsages", "aparsearg_8h.html#a281ee13e0f3901d0beee705d58e6766c", null ],
     [ "parseArgs", "aparsearg_8h.html#a5950c8c25c7c023846078db2a0989bc7", null ],
     [ "printAllArgsHelp", "aparsearg_8h.html#a5827455fa013cb7abdda79a1fa3db551", null ],
-    [ "printProjInfo", "aparsearg_8h.html#a6ed5ca9fcfdd16570d08f80e2bef0a9c", null ],
-    [ "Seq", "aparsearg_8h.html#a4c0dc8a2e7a66482f91950db0fcdb52e", null ],
-    [ "Seq", "aparsearg_8h.html#ade672b583b3624daf98a7a809195bcd7", null ]
+    [ "printProjInfo", "aparsearg_8h.html#a6ed5ca9fcfdd16570d08f80e2bef0a9c", null ]
 ];

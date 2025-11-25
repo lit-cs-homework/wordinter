@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "WordInter", "index.html", [
+    [ "Bug List", "bug.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -51,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"strutils_8h.html#a1c935b6cebd8d3ca8aa3fa081cd73d24"
+"structUsages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

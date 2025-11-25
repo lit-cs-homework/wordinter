@@ -14,7 +14,8 @@ var searchData=
   ['argparser_11',['ArgParser',['../aparsearg_8h.html#a3b671fe09d8531ad75cea8a2de0b9eb0',1,'aparsearg.h']]],
   ['argparserobj_12',['ArgParserObj',['../structArgParserObj.html',1,'']]],
   ['args_13',['args',['../structParseArgRes.html#a139bf6bc6f837b497d0bcc5fa808a029',1,'ParseArgRes']]],
-  ['argv_14',['argv',['../structArgParserObj.html#ac44519859a87099d36d7a0b98c910469',1,'ArgParserObj']]],
-  ['auther_15',['auther',['../structProjInfo.html#af03d5717e23e3b19ad2ef0e271c975f5',1,'ProjInfo']]],
-  ['author_16',['Author',['../main_8h.html#afefd7e2590b9154b20b637e438eb6bad',1,'main.h']]]
+  ['argsseq_14',['ArgsSeq',['../aparsearg_8h.html#a9900ca5126722087d8feb02e1016d6c8',1,'aparsearg.h']]],
+  ['argv_15',['argv',['../structArgParserObj.html#ac44519859a87099d36d7a0b98c910469',1,'ArgParserObj']]],
+  ['auther_16',['auther',['../structProjInfo.html#af03d5717e23e3b19ad2ef0e271c975f5',1,'ProjInfo']]],
+  ['author_17',['Author',['../main_8h.html#afefd7e2590b9154b20b637e438eb6bad',1,'main.h']]]
 ];

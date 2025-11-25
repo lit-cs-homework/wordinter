@@ -3,7 +3,7 @@ var searchData=
   ['saybye_0',['sayBye',['../cmsg_8h.html#aa1602473458b5f957cc2f7293b3df0af',1,'cmsg.h']]],
   ['searchby_1',['searchBy',['../seq_8h.html#a2163beda15c69ba85a2f868244b0ebe2',1,'seq.h']]],
   ['sep_2',['sep',['../structStrSepStream.html#a2f44b091be60ccdd664997eb163d2ff4',1,'StrSepStream']]],
-  ['seq_3',['Seq',['../seq_8h.html#af448415535ca44dbca40b3d0cf053943',1,'Seq:&#160;seq.h'],['../aparsearg_8h.html#ade672b583b3624daf98a7a809195bcd7',1,'Seq(CharSeq) ListArg:&#160;aparsearg.h'],['../aparsearg_8h.html#a4c0dc8a2e7a66482f91950db0fcdb52e',1,'Seq(char *) CpSeq:&#160;aparsearg.h'],['../strimpl_8h.html#a24b70648f0a868594b5bad63275d86e4',1,'Seq(char) CharSeq:&#160;strimpl.h'],['../types_8h.html#a26581ff9becc42483abe088a15773f73',1,'Seq(Pos) PosSeq:&#160;types.h'],['../types_8h.html#ade5eb0bfea4d97eaf59ce33a9214d8a7',1,'Seq(Rec) RecSeq:&#160;types.h']]],
+  ['seq_3',['Seq',['../seq_8h.html#af448415535ca44dbca40b3d0cf053943',1,'seq.h']]],
   ['seq_4',['seq',['../structUsages.html#ae03131ca28ceac1b7c8f5de5784ae4fb',1,'Usages']]],
   ['seq_2eh_5',['seq.h',['../seq_8h.html',1,'']]],
   ['seq_5fcheck_5frange_6',['SEQ_CHECK_RANGE',['../cnf_8h.html#aa35fcdcf6cc11fe02ca439f9c97451c8',1,'cnf.h']]],

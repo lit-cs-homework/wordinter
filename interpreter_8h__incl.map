@@ -1,10 +1,10 @@
 <map id="src/interpreter.h" name="src/interpreter.h">
-<area shape="rect" id="Node000001" title="for REPL /*doctest:" alt="" coords="358,5,469,31"/>
+<area shape="rect" id="Node000001" title="for REPL" alt="" coords="358,5,469,31"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="231,374,305,399"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="358,33,268,53,170,83,126,101,90,121,67,143,61,153,59,164,59,240,63,267,74,290,92,310,114,328,166,354,217,371,215,376,164,359,111,332,88,314,70,293,58,269,53,241,53,164,56,151,63,139,87,117,124,97,168,78,267,48,357,28"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="464,447,523,473"/>
 <area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="358,25,304,31,241,41,175,58,112,81,39,111,26,119,16,130,10,145,8,164,8,314,11,330,21,344,37,358,59,371,114,394,182,412,328,439,448,453,448,458,328,444,181,418,113,399,56,376,34,363,17,348,7,332,3,314,3,164,5,144,12,128,23,115,36,106,110,77,174,52,240,36,303,25,357,20"/>
-<area shape="rect" id="Node000004" href="$types_8h.html" title="types for storing data /*doctest:" alt="" coords="458,226,520,252"/>
+<area shape="rect" id="Node000004" href="$types_8h.html" title="types for storing data" alt="" coords="458,226,520,252"/>
 <area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="435,29,463,49,495,77,527,111,551,152,553,171,547,189,521,218,517,215,542,186,548,170,545,154,522,115,492,81,460,53,432,34"/>
 <area shape="rect" id="Node000009" href="$strutils_8h.html" title="string utilities" alt="" coords="101,153,171,178"/>
 <area shape="poly" id="edge12_Node000001_Node000009" title=" " alt="" coords="390,34,295,81,172,147,170,142,292,77,387,29"/>
