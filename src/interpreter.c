@@ -157,7 +157,8 @@ static bool _ordFileArg(slen_t*ordp, const CharSeq arg, RecSeq rs, char** const 
 }
 
 static void priFileNotFound(bool isArgOrd, slen_t fileArgOrd, const char* fnameArg){
-    if(isArgOrd) warn("no file indexed in %" PRI_SLEN " found", fileArgOrd);
+    if (fileArgOrd == 0) warn("no file found"); // 0 means `*`
+    else if(isArgOrd) warn("no file indexed in %" PRI_SLEN " found", fileArgOrd);
     else warn("no file named '%s' found", fnameArg);
 }
 
@@ -261,8 +262,10 @@ enum Flag evalCmd(Interpreter* pinterp, const CharSeq cmd){
         }
         break;
     case 3:
-        if(args.len==0) fileArgOrd = 0;
-        else{
+        if(args.len == 0) {
+            fileArgOrd = 0;
+            isArgOrd = true;
+        }else{
             isArgOrd = _ordFileArg(&fileArgOrd, args, pinterp->db, &fnameArg);
             if(fileArgOrd==-1){
                 _PriNoFileFound();
