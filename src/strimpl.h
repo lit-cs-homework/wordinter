@@ -32,8 +32,11 @@
 #include <stdio.h>
 #include "seq.h"
 
+// XXX: bypass doxygen#11879
+#define _CharSeq Seq(char)
 /// @ref Seq of char
-typedef Seq(char) CharSeq;
+typedef _CharSeq CharSeq;
+#undef _CharSeq
 
 // no newline
 #define printCharSeq(s) forEach(s, putchar)

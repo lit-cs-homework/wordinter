@@ -91,8 +91,13 @@
     }\
 }while(0)
 
-typedef Seq(CharSeq) ListArg;
-typedef Seq(CharSeq) ArgsSeq;
+// XXX: bypass doxygen#11879
+/// @bug <https://github.com/doxygen/doxygen/issues/11879>
+///
+/// ::Seq of ::CharSeq (like Nim's `seq[string]`)
+#define CharSeqSeq_ Seq(CharSeq)
+typedef CharSeqSeq_ ListArg;
+typedef CharSeqSeq_ ArgsSeq;
 
 
 #define MAX_MAP 26 // mapping 'a'-'z' to 0-25
@@ -112,7 +117,10 @@ typedef struct{
     const char* help; ///< not NULL
 } NamedHelp;
 
-typedef Seq(char*) CpSeq;
+#define _CharpSeq Seq(char*)
+/// @ref Seq of `char*`
+typedef _CharpSeq CpSeq;
+#undef _CharpSeq
 
 typedef struct {
     char* const * argv;
@@ -215,7 +223,7 @@ void freeParseArgRes(ParseArgRes res);
 #define DefVer "0.0.1" ///< default version used when not given
 #define DefLicense "MIT"
 
-typedef Seq(CharSeq) UsageSeq;
+typedef CharSeqSeq_ UsageSeq;
 
 typedef struct {
     UsageSeq seq;
